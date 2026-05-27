@@ -28,6 +28,9 @@ chmod +x /root/.vnc/xstartup
 # Limpiar sesiones VNC anteriores si existen
 vncserver -kill :1 > /dev/null 2>&1
 
+rm /tmp/.X1-lock
+rm /tmp/.X11-unix/X1
+
 # Iniciar VNC
 vncserver :1 -geometry 1280x800 -depth 24
 
